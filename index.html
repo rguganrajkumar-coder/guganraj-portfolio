@@ -380,15 +380,21 @@ padding:120px 8%;
 }
 
 .title{
-
-font-size:48px;
-
-margin-bottom:60px;
-
+ 
+font-size:clamp(2.2rem, 4vw, 3.4rem);
+ 
+margin:0 auto 50px;
+ 
 text-align:center;
-
+ 
 color:var(--primary);
-
+ 
+display:block;
+ 
+width:100%;
+ 
+position:relative;
+ 
 }
 
 </style>
@@ -1017,8 +1023,16 @@ grid-template-columns:repeat(2,1fr);
   }
 
   .project-grid,
-  .certificate-grid{
+  .certificate-grid,
+  .skills-grid{
     grid-template-columns: 1fr;
+  }
+
+  .skills-grid,
+  .certificate-grid,
+  .project-grid,
+  .stats-grid{
+    justify-items: center;
   }
 }
 
@@ -1083,6 +1097,23 @@ grid-template-columns:repeat(2,1fr);
   .socials{
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .skills-grid,
+  .certificate-grid,
+  .project-grid,
+  .stats-grid{
+    grid-template-columns: 1fr;
+    width: min(100%, 420px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skill-card,
+  .certificate,
+  .stat,
+  .project-card{
+    width: 100%;
   }
 
   footer{
@@ -2298,15 +2329,17 @@ SECTION TITLES
 =======================================================*/
 
 .title{
-
+ 
 position:relative;
-
-display:inline-block;
-
-left:50%;
-
-transform:translateX(-50%);
-
+ 
+display:block;
+ 
+width:100%;
+ 
+text-align:center;
+ 
+margin:0 auto 50px;
+ 
 }
 
 
